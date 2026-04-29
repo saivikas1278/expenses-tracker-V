@@ -1,49 +1,38 @@
-# Expense Tracker
+# Expenses Tracker V
 
-A MERN stack expense tracker with a Node.js/Express backend and a React frontend built with Vite and Tailwind CSS.
+A full-stack expense tracking application built with React, Express, and Supabase.
 
-## Project Structure
+## Features
+- User Authentication (Signup/Login)
+- Dashboard with Balance, Income, and Expense tracking
+- Transaction history with charts
+- Real-time data storage via Supabase
 
-```text
-expense-tracker/
-├── client/
-│   ├── public/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── index.html
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── tailwind.config.js
-│   └── vite.config.js
-├── server/
-│   ├── package.json
-│   └── server.js
-├── .gitignore
-└── README.md
-```
+## Local Development
 
-## Getting Started
+1. Install dependencies:
+   ```bash
+   npm run install-all
+   ```
 
-### Server
+2. Set up environment variables in both `client/.env` and `server/.env`.
 
-```bash
-cd server
-npm install
-npm run dev
-```
+3. Run both client and server:
+   ```bash
+   npm run dev
+   ```
 
-### Client
+## Deployment (Render)
 
-```bash
-cd client
-npm install
-npm run dev
-```
+This project is configured for a unified deployment on Render.
 
-## Notes
+1. **New Web Service**: Connect your GitHub repository.
+2. **Build Command**: `npm run render-postbuild`
+3. **Start Command**: `npm start`
+4. **Environment Variables**:
+   - `SUPABASE_URL`
+   - `SUPABASE_KEY`
+   - `JWT_SECRET`
+   - (Optional) `PORT` (defaults to 5000)
 
-- The backend is set up to expose a basic Express server entry point.
-- The frontend is set up for React, Vite, and Tailwind CSS.
-- Add your MongoDB connection, routes, controllers, and React features as you build the app.
+The server will build the React frontend and serve it automatically.
